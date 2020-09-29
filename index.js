@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 app.use('/send-mail',require('./reminder/api'))
 
 
-app.listen(5000,(err)=>{
+app.listen(process.env.PORT|| 5000,(err)=>{
     if(err){
         console.log(err);
     }
